@@ -1,0 +1,87 @@
+cnn = Sequential()
+cnn.add(ZeroPadding2D((1,1),
+                      input_shape=input_shape))
+cnn.add(Conv2D(64,
+               3,
+               3,
+               activation='relu'))
+cnn.add(ZeroPadding2D((1,1)))
+cnn.add(Conv2D(64,
+               3,
+               3,
+               activation='relu'))
+cnn.add(MaxPooling2D((2,2),
+                     strides=(2,2),
+                     dim_ordering="th"))
+
+cnn.add(ZeroPadding2D((1,1)))
+cnn.add(Conv2D(128,
+               3,
+               3,
+               activation='relu'))
+cnn.add(ZeroPadding2D((1,1)))
+cnn.add(Conv2D(128,
+               3,
+               3,
+               activation='relu'))
+cnn.add(MaxPooling2D((2,2),
+                     strides=(2,2),
+                     dim_ordering="th"))
+
+cnn.add(ZeroPadding2D((1,1)))
+cnn.add(Conv2D(256,
+               3,
+               3,
+               activation='relu'))
+cnn.add(ZeroPadding2D((1,1)))
+cnn.add(Conv2D(256,
+               3,
+               3,
+               activation='relu'))
+cnn.add(ZeroPadding2D((1,1)))
+cnn.add(Conv2D(256,
+               3,
+               3,
+               activation='relu'))
+cnn.add(MaxPooling2D((2,2),
+                     strides=(2,2),
+                     dim_ordering="th"))
+
+cnn.add(ZeroPadding2D((1,1)))
+cnn.add(Conv2D(512,
+               3,
+               3,
+               activation='relu'))
+cnn.add(ZeroPadding2D((1,1)))
+cnn.add(Conv2D(512,
+               3,
+               3,
+               activation='relu'))
+cnn.add(ZeroPadding2D((1,1)))
+cnn.add(Conv2D(512,
+               3,
+               3,
+               activation='relu'))
+cnn.add(MaxPooling2D((2,2),
+                     strides=(2,2),
+                     dim_ordering="th"))
+
+cnn.add(ZeroPadding2D((1,1)))
+cnn.add(Conv2D(512,
+               3,
+               3,
+               activation='relu'))
+cnn.add(ZeroPadding2D((1,1)))
+cnn.add(Conv2D(512,
+               3,
+               3,
+               activation='relu'))
+cnn.add(ZeroPadding2D((1,1)))
+cnn.add(Conv2D(512,
+               3,
+               3,
+               activation='relu'))
+cnn.add(MaxPooling2D((2,2),
+                     strides=(2,2),
+                     dim_ordering="th"))
+cnn.summary()
